@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Black Pink</title>
+    <link href="index.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Dosis:wght@600&display=swap" rel="stylesheet">
+<style>
+    #flower-set
+    {
+        height:180px;
+    }
+    .between-place
+    {
+        margin:0px;
+        padding: 0px;
+        display: flex;
+        flex-direction: column;
+        align-items: center; /* Center the content horizontally */
+    }
+    p{
+        margin: 0px;
+    }
+    button[onclick = "information()"]
+    {
+        margin-top: 10px;
+        width:400px;
+        background-color: rgb(85, 156, 85);
+        border:2px solid white;
+        padding: 5px;
+        font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        font-size: 15px;
+        color:rgb(255, 255, 255);
+    }
+    button[onclick = "information()"]:hover
+    {
+        background-color: rgb(49, 100, 49);
+    }
+    h2,h3{
+        text-align: center;
+    }
+    h2{
+        color:crimson;
+        font-size: 30px;
+        margin-bottom:2px;
+    }
+    h3{
+        color:gray;
+    }
+    table{
+        margin:0px;
+        width:100%;
+        width:500px;
+        border:1px solid rgb(100, 100, 100);
+        background-color: black;
+        font-size:20px;
+        border-radius: 10px;
+    }
+    td{
+        padding:20px;
+    }
+    .rangeColor
+    {
+        display: flex;
+    }
+    .purple_color, .pink_color, .yellow_color, .white_color, .red_color
+    {
+        width:20px;
+        height:20px;
+        background-color: aqua;
+        margin: 5px;
+        border:1px solid white;
+        border-radius: 50px;
+    }
+    .border_color:hover
+    {
+        border-bottom: 3px solid rgb(255, 101, 126);
+    }
+    .purple_color
+    {
+        background-color: purple;
+    }
+    .pink_color
+    {
+        background-color: pink;
+    }
+    .yellow_color
+    {
+        background-color: rgb(255, 255, 89);
+    }
+    .white_color
+    {
+        background-color: white;
+    }
+    .red_color
+    {
+        background-color: red;
+    }
+    select,option
+    {
+        background-color: pink;
+        border: 0px;
+        font-size:16px;
+        padding:2px;
+        width:150px;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    }
+</style>
+</head>
+<body>
+    <header>
+        <h1>
+            CONCERT BLACKPINK
+        </h1>
+    </header>
+    <nav>
+        <ul class="mainMenu">
+            <li><a href = "index.html">Trang chủ</a></li>
+            <li class="dropMenu"><a href="#">Hoạt động</a>
+                <ul class="subMenu">
+                    <li><a href="#">Quay số</a></li>
+                    <li><a href="flower.html">Flowers</a></li>
+                    <li><a href="quiz.html">Quiz</a></li>
+                </ul>
+            </li>
+            <li><a href="register.html">Đăng ký</a></li>
+        </ul>
+    </nav>
+    <section>
+        <div class="left-place">
+        <ul>Popular List song
+            <li><a href="https://www.youtube.com/watch?v=dyRsYk0LyA8" target="_blank" rel="noopener noreferrer">Lovesick Girls</a></li>
+            <li><a href="https://www.youtube.com/watch?v=2S24-y0Ij3Y"  target="_blank" rel="noopener noreferrer">Kill This Love</a></li>
+            <li><a href="https://www.youtube.com/watch?v=ioNng23DkIM" target="_blank" rel="noopener noreferrer">How You Like That</a></li>
+            <li><a href="https://www.youtube.com/watch?v=VE3i4_3fdA0" target="_blank" rel="noopener noreferrer">Love To Hate Me</a></li>
+            <li><a href="https://www.youtube.com/watch?v=gQlMMD8auMs" target="_blank" rel="noopener noreferrer">Pink Venom</a></li>
+            <li><a href="https://www.youtube.com/watch?v=POe9SOEKotk" target="_blank" rel="noopener noreferrer">Shut Down</a></li>
+            <li><a href="https://www.youtube.com/watch?v=YudHcBIxlYw" target="_blank" rel="noopener noreferrer">FLOWER</a></li>
+            <li><a href="https://www.youtube.com/watch?v=CKZvWhCqx1s" target="_blank" rel="noopener noreferrer">On The Ground</a></li>
+            <li><a href="https://www.youtube.com/watch?v=awkkyBH2zEo" target="_blank" rel="noopener noreferrer">Lalisa</a></li>
+        </ul>
+        </div>
+        <div class="between-place">
+                <h2>Góc hoa xinh xinh</h2>
+                <h3>Hãy lựa chọn bó hoa của mình</h3>
+                <table>
+                    <tr>
+                        <td>Loại hoa</td>
+                        <td>
+                            <select id="flower" onchange="resetImage()" checked>
+                                <option value="Tulip">Tulip</option>
+                                <option value="Rose">Rose</option>
+                                <option value="Lavender">Lavender</option>
+                                <option value="Daisy">Daisy</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Màu sắc</td>
+                        <td class="rangeColor">
+                            <div class="border_color">
+                                <div class="red_color" onclick="changeImage('Red')"></div>
+                            </div>
+                            <div class="border_color">
+                                <div class="white_color" onclick="changeImage('White')"></div>
+                            </div>
+                            <div class="border_color">
+                                <div class="yellow_color" onclick="changeImage('Yellow')"></div>
+                            </div>
+                            <div class="border_color" >
+                                <div class="pink_color" onclick="changeImage('Pink')"></div>
+                            </div>
+                            <div class="border_color">
+                                <div class="purple_color" onclick="changeImage('Purple')"></div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Hình ảnh minh họa</td>
+                        <td>
+                            <img src = "https://i.pinimg.com/564x/e4/a3/ea/e4a3eaa81d4a1cba7d4ff45ad9c47f30.jpg" id="flower-set" value = "none" alt="Ảnh minh họa">
+                            <p id="showName">None</p>
+                        </td>
+                    </tr>
+                </table>
+                <button onclick = "information()">Submit</button>
+                <script src="flower.js"></script>
+        </div>
+        <div class="right-place">
+            <div>
+                <img src="https://i.pinimg.com/564x/2c/f8/68/2cf868ec24d1518d62b6067f298e2634.jpg" alt="blink">
+                <img src="https://tse3.mm.bing.net/th?id=OIP.S9f3uHazabVdMR00DWLejwHaEJ&pid=Api&P=0&h=180" alt="blink">
+                <img src="https://i.pinimg.com/564x/e6/05/6c/e6056c3552cdb8417e32850c3d11dad1.jpg" alt="blink">
+                <img src="https://i.pinimg.com/564x/7b/fd/79/7bfd798296ee311f5bf36668120d6954.jpg" alt="blink">
+                <img src="https://i.pinimg.com/736x/24/b2/69/24b269da2800fa1e742ac5ea6cf3de85.jpg" alt="blink">
+                <img src="https://i.pinimg.com/564x/5b/a9/63/5ba963f3180858c2747f2526120c5a14.jpg" alt="blink">
+                <img src="https://i.pinimg.com/564x/66/e4/ab/66e4ab817d5f0e43cfc0ecda340330cc.jpg" alt="blink">
+                <img src="https://i.pinimg.com/736x/3f/19/de/3f19de837c52f9e23af1d0e2cbafc4dd.jpg" alt="blink">
+                <img src="https://i.pinimg.com/736x/df/4d/dc/df4ddc572a97c26f6ea69a6d5be21f25.jpg" alt="blink">
+            </div>
+        </div>
+    </section>
+    <footer>
+        <h4>Made by Phoebe Home</h4>
+    </footer>
+</body>
+</html>

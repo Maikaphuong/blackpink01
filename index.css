@@ -1,0 +1,162 @@
+body
+{
+    font-family: 'Dosis', sans-serif;
+    background-color:rgb(255, 210, 218);
+}
+header
+{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    color:rgb(248, 147, 164);
+    background-color:black;
+    height:100px;
+}
+nav
+{
+    background-color: rgb(252, 146, 164);
+    padding:0px;
+    margin:0px;
+}
+li,a
+{
+    text-decoration: none;
+    list-style-type: none;
+    color:white;
+}
+.mainMenu
+{
+    display:flex;
+    justify-content: left;
+    padding:20px;
+    padding-left:0px;
+    margin:0px 0px 0px;
+    align-items: center;
+    position: relative;
+    border-bottom:5px solid black;
+}
+.mainMenu>li{
+    padding:0px;
+}
+.mainMenu>li>a
+{
+    padding:20px;
+    color:black;
+}
+.mainMenu>li>a:hover{
+    background-color: rgb(255, 91, 118);
+    font-size:larger;
+}
+.subMenu
+{
+    display:none;
+    border-top:2px solid rgb(0, 0, 0);
+    position:absolute;
+    margin-top:20px;
+    padding:0px;
+    background-color:rgb(252, 146, 164);
+}
+.subMenu>li{
+    margin:0px;
+    padding:10px;
+    width:120px;
+}
+.subMenu>li:hover
+{
+    background-color: rgb(255, 91, 118);
+}
+.subMenu>li>a
+{
+    padding:0px;
+    margin:0px;
+    color:black;
+}
+.dropMenu:hover .subMenu{
+    display:block;
+}
+img{
+    width:200px;
+    max-width:150px;
+    height:auto;
+    margin:5px;
+    border-radius: 5px;
+    border:1px dashed white;
+}
+section
+{
+    border-bottom:5px solid black;
+    height:600px;
+    margin:0px;
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    color:rgb(248, 147, 164);
+}
+.left-place
+{
+    max-width:10%;
+    background-color:black;
+    margin:0px;
+    padding:0px;
+}
+.left-place>ul
+{
+    margin:0px;
+    padding:20px;
+}
+.left-place>ul>li
+{
+    margin:10px;
+}
+.left-place>ul>li>a
+{
+    color:rgb(255, 255, 255);
+}
+.left-place>ul>li>a:hover
+{
+    color: rgb(255, 91, 118);
+}
+.between-place
+{
+    max-width: 60%;
+    width:60%;
+}
+.right-place
+{
+    overflow:hidden;
+    max-width:30%;
+    background-color:black;
+    padding:10px;
+}
+.right-place>div
+{
+    margin:0px;
+    padding:0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;  
+    animation: scrollUpDown 30s linear infinite;
+}
+@keyframes scrollUpDown {
+    0% {
+        transform: translateY(0%);
+    }
+    100% {
+        transform: translateY(-100%);
+    }
+}
+footer
+{
+    color:black;
+    background-color: rgb(255, 91, 118);
+    margin:0px 0px;
+}
+h4
+{
+    margin:0px 0px;
+    text-align:center;
+    padding:5px;
+}
+/*=================================================================================*/
+
+

@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Black Pink</title>
+    <link href="index.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Dosis:wght@600&display=swap" rel="stylesheet">
+<style>
+    select{
+        font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    }
+    .content-between
+    {
+        display:flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    h2
+    {
+        color:black;
+    }
+    input
+    {
+        background-color:  rgb(255, 255, 255);
+        border: none;
+        height:20px;
+        border-radius: 5px;
+    }
+    table
+    {
+        margin:0px;
+        padding:10px;
+        background-color: rgb(0, 0, 0);
+        border-radius: 5px;
+        max-width:500px;
+        height:300px;
+    }
+    button
+    {
+        background-color: rgb(57, 57, 57);
+        border:1px solid white;
+        height:30px;
+        margin-right:20px;
+        border-radius: 5px;
+        font-family: 'Dosis', sans-serif;
+        color:aliceblue;
+    }
+    button:hover
+    {
+        background-color:black;
+    }
+/*    #displayMode
+    {
+        display:none;
+    }*/
+    #success
+    {
+        display:none;
+    }
+</style>
+
+</head>
+<body>
+    <header>
+        <h1>
+            CONCERT BLACKPINK
+        </h1>
+    </header>
+    <nav>
+        <ul class="mainMenu">
+            <li><a href = "index.html">Trang chủ</a></li>
+            <li class="dropMenu"><a href="#">Hoạt động</a>
+                <ul class="subMenu">
+                    <li><a href="#">Quay số</a></li>
+                    <li><a href="flower.html">Flowers</a></li>
+                    <li><a href="quiz.html">Quiz</a></li>
+                </ul>
+            </li>
+            <li><a href="register.html">Đăng ký</a></li>
+        </ul>
+    </nav>
+    <section>
+        <div class="left-place">
+        <ul>Popular List song
+            <li><a href="https://www.youtube.com/watch?v=dyRsYk0LyA8" target="_blank" rel="noopener noreferrer">Lovesick Girls</a></li>
+            <li><a href="https://www.youtube.com/watch?v=2S24-y0Ij3Y" target="_blank" rel="noopener noreferrer">Kill This Love</a></li>
+            <li><a href="https://www.youtube.com/watch?v=ioNng23DkIM" target="_blank" rel="noopener noreferrer">How You Like That</a></li>
+            <li><a href="https://www.youtube.com/watch?v=VE3i4_3fdA0" target="_blank" rel="noopener noreferrer">Love To Hate Me</a></li>
+            <li><a href="https://www.youtube.com/watch?v=gQlMMD8auMs" target="_blank" rel="noopener noreferrer">Pink Venom</a></li>
+            <li><a href="https://www.youtube.com/watch?v=POe9SOEKotk" target="_blank" rel="noopener noreferrer">Shut Down</a></li>
+            <li><a href="https://www.youtube.com/watch?v=YudHcBIxlYw" target="_blank" rel="noopener noreferrer">FLOWER</a></li>
+            <li><a href="https://www.youtube.com/watch?v=CKZvWhCqx1s" target="_blank" rel="noopener noreferrer">On The Ground</a></li>
+            <li><a href="https://www.youtube.com/watch?v=awkkyBH2zEo" target="_blank" rel="noopener noreferrer">Lalisa</a></li>
+        </ul>
+        </div>
+        <div class="between-place">
+            <div id = "displayMode">
+                <section class="content-between"  id="content-between">
+                    <h2>Đăng ký vé concert</h2>
+                    <form>
+                        <table>
+                            <tr>
+                                <td>Họ và tên</td>
+                                <td>
+                                    <input type="text" id="yourName">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    Ngày sinh của bạn:
+                                </td>
+                                <td>
+                                    <input type="date" id="yourBirth">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Số điện thoại của bạn</td>
+                                <td>
+                                    <input type="text" id="yourPhone">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Loại vé</td>
+                                <td>
+                                    <select id="ticket" name="ticket" checked>
+                                        <option value="VIP">VIP: 9.800.000 VNĐ</option>
+                                        <option value="PLATINUM">PLATINUM: 7.800.000 VNĐ</option>
+                                        <option value="CAT 1">CAT 1: 6.800.000 VNĐ</option>
+                                        <option value="CAT 2">CAT 2: 5.800.000 VNĐ</option>
+                                        <option value="CAT 3">CAT 3: 3.800.000 VNĐ</option>
+                                    </select>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Số vé</td>
+                                <td>
+                                    <input type="number" id="numTicket" min = "1" max = "10">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Hình thức thanh toán</td>
+                                <td>
+                                    <input type="radio" id ="payBill" name="payBill" value="Trực tiếp" checked> Trực tiếp
+                                    <input type="radio" id ="payBill" name="payBill" value="Chuyển khoản" checked> Chuyển khoản
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                </td>
+                                <td>
+                                    <button onclick="regist(event)">Đăng ký</button>
+                                    <button submit="reset">Hủy</button>
+                                </td>
+                            </tr>
+                        </table>
+                    </form>
+                </section>
+            </div><!--Display mode-->
+            <article id="success">
+                <h2>Registration successful!</h2>
+                <h3>Thông tin của bạn</h3>
+                <table>
+                    <tr>
+                        <td>Tên của bạn: </td>
+                        <td id="nameCustom"></td>
+                    </tr>
+                    <tr>
+                        <td>Sinh nhật: </td>
+                        <td id="birthCustom"></td>
+                    </tr>
+                    <tr>
+                        <td>Số điện thoại của bạn: </td>
+                        <td id="phoneCustom"></td>
+                    </tr>
+                    <tr>
+                        <td>Thông tin vé: </td>
+                        <td id="styleTicket"></td>
+                    </tr>
+                    <tr>
+                        <td>Hình thức thanh toán: </td>
+                        <td id="payCustom"></td>
+                    </tr>
+                </table>
+                <p id="output"></p>
+            </article>
+        </div>
+        <div class="right-place">
+            <div>
+                <img src="https://i.pinimg.com/564x/2c/f8/68/2cf868ec24d1518d62b6067f298e2634.jpg" alt="blink">
+                <img src="https://tse3.mm.bing.net/th?id=OIP.S9f3uHazabVdMR00DWLejwHaEJ&pid=Api&P=0&h=180" alt="blink">
+                <img src="https://i.pinimg.com/564x/e6/05/6c/e6056c3552cdb8417e32850c3d11dad1.jpg" alt="blink">
+                <img src="https://i.pinimg.com/564x/7b/fd/79/7bfd798296ee311f5bf36668120d6954.jpg" alt="blink">
+                <img src="https://i.pinimg.com/736x/24/b2/69/24b269da2800fa1e742ac5ea6cf3de85.jpg" alt="blink">
+                <img src="https://i.pinimg.com/564x/5b/a9/63/5ba963f3180858c2747f2526120c5a14.jpg" alt="blink">
+                <img src="https://i.pinimg.com/564x/66/e4/ab/66e4ab817d5f0e43cfc0ecda340330cc.jpg" alt="blink">
+                <img src="https://i.pinimg.com/736x/3f/19/de/3f19de837c52f9e23af1d0e2cbafc4dd.jpg" alt="blink">
+                <img src="https://i.pinimg.com/736x/df/4d/dc/df4ddc572a97c26f6ea69a6d5be21f25.jpg" alt="blink">
+            </div>
+        </div>
+    </section>
+    <footer>
+        <h4>Made by Phoebe Home</h4>
+    </footer>
+    <script src="regist.js"></script>
+</body>
+</html>
